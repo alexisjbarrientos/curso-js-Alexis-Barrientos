@@ -1,4 +1,8 @@
+// Obtener el formulario de registro
 const form = document.getElementById('registro');
+
+// Recuperar usuarios almacenados o inicializar un array vacío
+const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -12,22 +16,25 @@ form.addEventListener('submit', function(event) {
     nombre: nombre,
     apellido: apellido,
     email: email,
-    contraseña: contraseña
+    contraseña: contraseña,
+    saldo: 0 // Agregar el campo de saldo inicializado en 0
   };
 
-  const datosIngreso = JSON.stringify(datos);
+  usuariosRegistrados.push(datos); // Agregar nuevos datos al array
 
-  localStorage.setItem('datos', datosIngreso);
+  localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados)); // Guardar array actualizado en el Local Storage
 
   // Borra los datos del formulario después de enviarlo
   form.reset();
 
   // Accede a los datos de localStorage después de guardarlos
-  const datosAlmacenados = localStorage.getItem('datos');
-  if (datosAlmacenados) {
-    const datosRecuperados = JSON.parse(datosAlmacenados);
-    console.log(datosRecuperados);
+  const usuariosAlmacenados = JSON.parse(localStorage.getItem('usuarios'));
+  if (usuariosAlmacenados) {
+    console.log(usuariosAlmacenados);
   }
 
-  form.action ="./../ingresar/ingresar.html";
+  // Redirecciona a la página de ingreso
+  window.location.href = "./../ingresar/ingresar.html";
 });
+
+

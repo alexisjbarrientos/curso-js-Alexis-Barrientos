@@ -1,17 +1,20 @@
-Este código es un pequeño prototipo de billetera virtual que permite a los usuarios iniciar sesión, ver su saldo, depositar dinero y transferir dinero a otros usuarios.
+# BankSim
 
-El código comienza con una lista de usuarios:
-usuario n°1 Alexis ,contraseña : 4432. 
-usuario n°2 Julia , contraseña : 1234.
-usuario n °3 Juan , contraseña : 5678.
-que cada usuario tiene su saldo .
-tiene dos funciones una para buscar al usuario y devolver sus datos y otra funcion que es para el ingreso que se pide que ingrese usuario y contraseña (login).
+Este es un proyecto de simulación bancaria que incluye varias funcionalidades como registro de usuarios, inicio de sesión, transferencias de dinero, ingreso de dinero y más.
 
-Una vez que el usuario entra tiene un menu (ver saldo , trasferir y ingresar dinero).
+## Características principales
 
-se utiliza prompt y alert para interactuar con el usuario.
+- Registro de usuarios (registra el usuario y se guarda en el local)
+- Inicio de sesión ( verifica si el usuario esta registrado  y ingresa)
+- Transferencias de dinero( transfiere dinero a otros usuarios )
+- Ingreso de dinero( ingresa dinero y lo suma al dinero disponible)
+
+# Nota 
+
+va a encontrar el perfil y pagar facturas sin funcionar 
 
 
-y del lado del html se hizo la pag de ingreso y la de registrarse y un avance de la pag una vez que entra el usuario
+
+
 
 
